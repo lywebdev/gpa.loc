@@ -1,0 +1,29 @@
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_visually-impaired {
+    font-size: 16px;
+    //font-weight: bold;
+    text-transform: uppercase;
+    padding: 25px 20px;
+    background: $color-dark-light;
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $color-dark;
+    }
+
+    .icon {
+        margin-right: 25px;
+    }
+}

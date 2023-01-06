@@ -1,0 +1,146 @@
+.section {
+    padding: 0 $pc-grid;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+
+    @include _1024 {
+        padding: 0 $pc-grid-middle;
+    }
+
+    @include _600 {
+        padding: $mobile-grid;
+    }
+}
+
+.section__title {
+    //font-family: $font-rubik;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-bottom: 30px;
+
+    &.section__title_link {
+        a {
+            transition: all 0.4s;
+
+            &:hover {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-dark;
+    }
+}
+
+.section__topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__topbar__btns {
+    display: flex;
+    align-items: center;
+}
+.blog-news__sort {
+    display: flex;
+    align-items: center;
+}
+
+
+.section-news {
+
+    @include _1280 {
+        .blog-post {
+            width: calc(50% - 30px);
+        }
+    }
+
+    @include _1024 {
+        .section-news__posts {
+            row-gap: 25px;
+        }
+    }
+
+    @include _800 {
+        .section-news__posts {
+            margin: 0;
+        }
+
+        .blog-post {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+.section-news__posts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    row-gap: 35px;
+}
+
+.section-distance-education__items {
+    padding: 0 150px;
+    margin: 0 -25px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px;
+
+    .info-card {
+        margin: 0 12.5px;
+        width: calc((100% / 2) - 25px);
+    }
+
+
+    @include _1280 {
+        margin: 0;
+        padding: 0 35px;
+
+        .info-card {
+            margin: 0 12.5px;
+            width: calc((100% / 2) - 25px);
+        }
+    }
+}
+
+.section-distance-education__btn {
+    font-size: 20px;
+    height: 85px;
+    background: $color-red;
+    text-decoration: none;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 0 90px;
+    box-sizing: border-box;
+    border-radius: $border-default-radius;
+    margin-top: 35px;
+    transition: all 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    span {
+        margin-right: 25px;
+    }
+
+
+    @include _1280 {
+        height: 75px;
+        font-size: 18px;
+        padding: 0 45px;
+    }
+}
+
+
+@import 'events';
+@import 'social-links';
+@import 'slider';
+@import 'blog-news';

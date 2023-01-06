@@ -1,0 +1,18 @@
+@import 'media_mixin';
+@import 'reset';
+@import 'variables';
+
+
+#app {
+    //font-family: $font-open-sans;
+    font-family: $font-montserrat;
+}
+
+.scroll-locked {
+    overflow: hidden;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+
+@import 'components/autoload';

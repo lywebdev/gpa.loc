@@ -1,0 +1,208 @@
+@keyframes show-slider {
+    from {
+        z-index: 5;
+        background: rgba(0,0,0,1);
+    }
+
+    to {
+        background: rgba(0,0,0,0);
+    }
+}
+
+.slider {
+
+    .swiper-wrapper {
+        height: 100%;
+        display: flex;
+        min-height: calc(100vh - #{$header-height});
+    }
+
+    .swiper-slide {
+        min-height: calc(100vh - #{$header-height});
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+        display: flex;
+        background: rgba(0,0,0,0.1);
+
+        img {
+            min-height: calc(100vh - #{$header-height});
+            max-height: calc(100vh - #{$header-height});
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &.loaded {
+
+        &:before {
+            //background: rgba(0,0,0,0);
+            animation: show-slider 0.4s forwards;
+        }
+    }
+
+    &.hide-overlay {
+        &:before {
+            z-index: -10;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: rgba(0,0,0,1);
+        z-index: 5;
+        transition: all 0.4s;
+    }
+}
+
+.slider__nav {
+    position: absolute;
+    bottom: 55px;
+    width: auto;
+    z-index: 1;
+    right: $pc-grid-middle;
+    column-gap: 20px;
+    display: flex;
+
+    .slider-btn-prev {}
+    .slider-btn-next {
+        transform: scaleX(-1);
+    }
+
+    .slider-btn-prev,
+    .slider-btn-next {
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: $color-white;
+        transition: all 0.3s;
+
+        &:not(.swiper-button-disabled) {
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.7;
+        }
+    }
+}
+
+.slider__slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__image {
+
+    &:before {
+        content: '';
+        position: absolute;
+        display: flex;
+        left: 0;
+        top: 0;
+        background: rgba(0,0,0,0.4);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        box-shadow: inset 0 0 100px rgba(0,0,0,0.3);
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.slider__overlay {
+    position: relative;
+    min-height: calc(100vh - 150px);
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    color: $color-white;
+    box-sizing: border-box;
+    padding: 50px $pc-grid;
+}
+
+.slider__subtitle {
+    font-size: 1.625em;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+    font-weight: 700;
+    margin-top: 35px;
+}
+
+.slider__title {
+    margin-top: 55px;
+    font-weight: bold;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    line-height: 150%;
+    padding: 0 35px;
+
+    span {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.slider__links {
+    margin-top: auto;
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            a {
+                text-decoration: none;
+                color: $color-white;
+                font-weight: bold;
+                font-size: 1.25em;
+                letter-spacing: 0.1px;
+                line-height: 150%;
+                box-sizing: border-box;
+                padding: 10px 15px;
+                min-height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+
+                    span {
+                        transform: translateY(-10px);
+                    }
+                }
+
+                span {
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}

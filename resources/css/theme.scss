@@ -1,0 +1,69 @@
+// Colors
+$color-theme-dark: #292626;
+$color-dark-blue: #212B3A; /* header */
+$color-dark-darker: #353E4B; /* header outlines */
+$color-dark-light: #1D1E20;
+$color-dark: #000000;
+$color-gray: #C9C9C9;
+$color-gray-light: #EFEFEF;
+$color-gray-bg: #F7F7F5; /* gray bg */
+$color-gray-bg_darkly: #B4B4B4;
+$color-gray-bg_dark: #828282;
+$color-red: #A40000;
+$color-white: #fff;
+$color-blue-light: #292F3C;
+$color-blue-light_active: #1C2029;
+
+$border-default-radius: 7px;
+
+// Fonts
+//@font-face {
+//    font-family: 'Rubik';
+//    font-style: normal;
+//    font-weight: normal;
+//    src: url('../fonts/rubik/Rubik-Regular.ttf');
+//}
+
+//@font-face {
+//    font-family: 'Bahnschrift';
+//    src: url('../fonts/bahnschrift/Bahnschrift.ttf');
+//}
+
+    // Roboto
+//@font-face {
+//    font-family: 'Roboto';
+//    src: url('../fonts/roboto/Roboto-Regular.ttf');
+//}
+    // Open Sans
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open_sans/OpenSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+    // Montserrat
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+//$font-rubik: 'Rubik', sans-serif;
+//$font-bahnschrift: 'Bahnschrift', sans-serif;
+//$font-roboto: 'Roboto', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;

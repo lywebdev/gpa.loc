@@ -1,0 +1,18 @@
+.imager__controls {
+  margin-bottom: 15px;
+}
+
+.imager__item__actions {
+  margin-top: 10px;
+}
+
+.imager__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.imager__item img {
+  width: 250px;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}

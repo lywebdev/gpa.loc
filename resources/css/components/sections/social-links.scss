@@ -1,0 +1,26 @@
+.social-links {
+    background: $color-blue-light;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links__item {
+    height: 100%;
+
+    a {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 0 23px;
+        background: $color-blue-light;
+        transition: all 0.3s;
+        color: $color-white;
+
+        &:hover {
+            background: $color-blue-light_active;
+        }
+    }
+}

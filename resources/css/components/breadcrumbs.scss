@@ -1,0 +1,32 @@
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    padding: 25px $pc-grid;
+    row-gap: 15px;
+}
+
+.breadcrumbs__item {
+    a {
+        color: $color-gray-bg_dark;
+        text-decoration: none;
+    }
+
+    &:not(.breadcrumbs__item_active) {
+        &:hover {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.breadcrumbs__item_active {
+    a {
+        color: $color-dark-blue;
+    }
+}
+
+.breadcrumbs__delimiter {
+    margin: 0 7px;
+}

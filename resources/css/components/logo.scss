@@ -1,0 +1,20 @@
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-right: 25px;
+    border-right: 1px solid $color-dark-darker;
+}
+
+.logo__image {
+    margin-right: 25px;
+}
+
+.logo__text {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    line-height: 140%;
+}
